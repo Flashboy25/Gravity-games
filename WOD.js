@@ -70,49 +70,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const snowContainer = document.getElementById("snow-container");
 
-const maxSnowflakes = 50; // Maximum number of snowflakes at any time
+const maxRaindrops = 50; // Maximum number of raindrops at any time
+let raindropCount = 0;
 
-let snowflakeCount = 0;
+// Function to create and animate a raindrop
+function createRaindrop() {
+  if (raindropCount >= maxRaindrops) return; // Limit the number of raindrops
 
-// Function to create and animate a snowflake
+  const raindrop = document.createElement("div");
+  raindrop.classList.add("snowflake"); // Using the existing class for styling
+  raindrop.textContent = "\u1F4A7"; // Unicode escape sequence for 💧
 
-function createSnowflake() {
+  // Randomize appearance and animation
+  raindrop.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+  raindrop.style.animationDuration = `${2 + Math.random() * 3}s`; // Faster fall for rain
+  raindrop.style.fontSize = `${5 + Math.random() * 15}px`; // Smaller sizes for raindrops
+  raindrop.style.animationDelay = `${Math.random() * 2}s`; // Random delay
 
-    if (snowflakeCount >= maxSnowflakes) return; // Limit the number of snowflakes
+  snowContainer.appendChild(raindrop);
+  raindropCount++; // Increment the raindrop count
 
-    const snowflake = document.createElement("div");
-
-    snowflake.classList.add("snowflake");
-
-    snowflake.textContent = "\u1F4A7"; // Unicode escape sequence for ❄
-
-    snowflake.style.left = `${Math.random() * 100}vw`; // Random horizontal position
-
-    snowflake.style.animationDuration = `${3 + Math.random() * 5}s`; // Random fall duration
-
-    snowflake.style.fontSize = `${10 + Math.random() * 20}px`; // Random size
-
-    snowflake.style.animationDelay = `${Math.random() * 2}s`; // Random delay
-
-    snowContainer.appendChild(snowflake);
-
-    snowflakeCount++; // Increment the snowflake count
-
-    // Remove the snowflake after it completes the animation
-
-    snowflake.addEventListener("animationend", () => {
-
-        snowflake.remove();
-
-        snowflakeCount--; // Decrement the snowflake count
-
-    });
-
+  // Remove the raindrop after it completes the animation
+  raindrop.addEventListener("animationend", () => {
+    raindrop.remove();
+    raindropCount--; // Decrement the raindrop count
+  });
 }
 
-// Continuously create snowflakes at intervals
-
-setInterval(createSnowflake, 250);
+// Continuously create raindrops at intervals
+setInterval(createRaindrop, 200);
 
   
 
