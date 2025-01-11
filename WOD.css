@@ -531,25 +531,26 @@ p {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
+  z-index: 1000; /* Make sure raindrops appear above other elements */
 }
 
-.snowflake {
+.raindrop {
   position: absolute;
-  top: -50px;
+  top: -50px; /* Start raindrops slightly above the viewport */
   color: blue; /* Raindrop color */
-  animation-name: fall;
+  animation-name: rain-fall;
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }
 
-@keyframes fall {
+@keyframes rain-fall {
   0% {
     transform: translateY(0);
     opacity: 1;
   }
   100% {
-    transform: translateY(100vh);
-    opacity: 0.5;
+    transform: translateY(100vh); /* Move the raindrop to the bottom of the viewport */
+    opacity: 0.6;
   }
 }
     /* last forever */
