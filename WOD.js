@@ -76,13 +76,13 @@ function createRaindrop() {
   if (raindropCount >= maxRaindrops) return; // Limit the number of raindrops
 
   const raindrop = document.createElement("div");
-  raindrop.classList.add("snowflake"); // Using the existing class for styling
-  raindrop.textContent = "\u1F4A7"; // Unicode escape sequence for 💧
+  raindrop.classList.add("raindrop"); // Updated class name
+  raindrop.textContent = "💧"; // Directly use the raindrop emoji
 
   // Randomize appearance and animation
   raindrop.style.left = `${Math.random() * 100}vw`; // Random horizontal position
   raindrop.style.animationDuration = `${2 + Math.random() * 3}s`; // Faster fall for rain
-  raindrop.style.fontSize = `${5 + Math.random() * 15}px`; // Smaller sizes for raindrops
+  raindrop.style.fontSize = `${10 + Math.random() * 20}px`; // Random sizes
   raindrop.style.animationDelay = `${Math.random() * 2}s`; // Random delay
 
   snowContainer.appendChild(raindrop);
@@ -96,9 +96,7 @@ function createRaindrop() {
 }
 
 // Continuously create raindrops at intervals
-setInterval(createRaindrop, 200);
-
-  
+setInterval(createRaindrop, 250);
 
   function updateCountdown() {
 
