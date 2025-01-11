@@ -84,7 +84,7 @@ function createSnowflake() {
 
     snowflake.classList.add("snowflake");
 
-    snowflake.textContent = "\u2744"; // Unicode escape sequence for ❄
+    snowflake.textContent = "\u1F4A7"; // Unicode escape sequence for ❄
 
     snowflake.style.left = `${Math.random() * 100}vw`; // Random horizontal position
 
