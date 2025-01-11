@@ -15,10 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const musicTracks = [
 
                 "https://flashboy25.github.io/Storage-Files/It_s Your Call.m4a",
-                "https://flashboy25.github.io/Storage-Files/Axewall-Jinguly-Chritmas.mp3",
-          "https://flashboy25.github.io/Storage-Files/christmas-party-time-249613.mp3",
-
-              "https://flashboy25.github.io/Storage-Files/christmas-music-merry-christmas-264517.mp3"
+                "https://flashboy25.github.io/Storage-Files/My Heart Full Of Flames _ PUBG Mobile Update 2.2 Song.m4a",
+          "https://flashboy25.github.io/Storage-Files/PUBG MOBILE - Power4 - Nothing_s Getting In Our Way - Official Music Video.m4a"
 
               
 
