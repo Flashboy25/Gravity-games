@@ -1,0 +1,1561 @@
+/* Blogger-Specific Styles to Hide Default Elements */
+
+#sidebar-wrapper, #footer-wrapper, #header-wrapper, #nav-wrapper, .mobile-menu-toggle, .mobile-search-toggle, h1 {
+
+    display: none !important;
+
+}
+
+/* Apply your custom styles to ensure layout */
+
+#content-wrapper, .container, row-x1, #main-wrapper, .main {
+
+    all: unset !important;  /* Unset all inherited styles */
+
+    display: block; /* Ensure default display values where necessary */
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding: 0; /* Reset padding if needed */
+
+}
+
+/* You can now add specific styles to these elements */
+
+#content-wrapper {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+}
+
+#main-wrapper {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+}
+
+/* For custom pages, apply necessary adjustments */
+
+.custom-page-layout {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+}
+
+  
+
+  
+
+
+/* Additional styles for specific elements can be added below */
+
+    
+
+  /* General Reset */
+
+* {
+
+    margin: 0 ;
+
+    padding: 0 ! ;
+
+    box-sizing: border-box;
+
+}
+
+    #Blog1 {
+
+        background-image: url('https://flashboy25.github.io/Storage-Files/images (69).jpeg') ! important;
+
+        background-size: cover;
+
+        background-position: center;
+
+        background-attachment: fixed;
+
+        font-family: Arial, sans-serif;
+
+        color: #fff;
+
+    }
+
+  
+
+  #main-wrapper {
+
+    background-color: transparent !important;
+
+}
+
+ #custom-nav-bar {
+
+    font-family: inherit;
+
+    margin: 0 ;
+
+    padding: 0 ;
+
+}
+
+  /* Navigation Bar Styles */
+
+  
+
+#custom-nav-bar {
+
+    background: #333;
+
+    color: white;
+
+    padding: 15px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: relative;
+
+    margin: 0 ;
+
+}
+
+  #custom-nav-bar {
+
+    position: fixed; /* Or 'absolute' based on your layout */
+
+    top: 0;
+
+    width: 100%;
+    
+    z-index: 900; /* Higher than other elements */
+
+}
+
+.custom-logo img {
+
+    max-height: 35px;
+
+    width: auto;
+
+    display: block;
+
+}
+
+.custom-menu {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.custom-menu nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 8px 10px;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s;
+
+}
+
+.custom-menu nav a:hover {
+
+    background-color: #555;
+
+}
+
+/* Hamburger Icon */
+
+.custom-hamburger {
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+}
+
+.custom-hamburger span {
+
+    width: 30px;
+
+    height: 3px;
+
+    background: white;
+
+    transition: all 0.3s ease;
+
+}
+
+.custom-hamburger.active span:nth-child(1) {
+
+    transform: rotate(45deg) translate(5px, 5px);
+
+}
+
+.custom-hamburger.active span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+.custom-hamburger.active span:nth-child(3) {
+
+    transform: rotate(-45deg) translate(5px, -5px);
+
+}
+
+/* Responsive Design for Menu */
+
+@media (max-width: 768px) {
+
+    .custom-menu {
+
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        width: 100%;
+
+        background-color: #333;
+
+        flex-direction: column;
+
+        padding: 10px 0;
+
+        gap: 10px;
+
+    }
+
+    .custom-menu.active {
+
+        display: flex;
+
+    }
+
+    .custom-hamburger {
+
+        display: flex;
+
+    }
+
+}
+
+    /* Donation Container Styles */
+
+.donation-container {
+
+  width: 95%;
+
+  max-width: 900px;
+
+  margin: 40px auto;
+
+  padding: 20px;
+
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+
+  font-family: inherit;
+
+}
+
+.donation-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+.donation-visual {
+
+  width: 100%;
+
+  max-width: 310px;
+
+  margin-bottom: 30px;
+
+  border-radius: 10px;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+
+}
+
+.donation-visual:hover {
+
+  transform: scale(1.05); /* GIF grows slightly on hover */
+
+}
+
+h2 {
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+
+  color: #333;
+
+  white-space: nowrap; /* Keeps button text on one line */
+
+}
+
+p {
+
+  font-size: 1em;
+
+  margin-bottom: 20px;
+
+  color: #555;
+
+  line-height: 1.5;
+
+}
+
+.donation-button {
+
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  background-color: #FF813F; /* Buy Me a Coffee orange color */
+
+  color: #fff;
+
+  font-size: 1.2rem;
+
+  font-weight: bold;
+
+  border: none;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  white-space: nowrap; /* Keeps button text on one line */
+
+}
+
+.donation-button:hover {
+
+  background-color: #e07b37;
+
+  transform: translateY(-2px);
+
+}
+
+@media (max-width: 600px) {
+
+  .donation-container {
+
+    padding: 10px;
+
+  }
+
+  
+
+  h2 {
+
+    font-size: 1.5em;
+
+  }
+
+  
+
+  p {
+
+    font-size: 0.95em;
+
+  }
+
+  
+
+  .donation-button {
+
+    padding: 10px 20px;
+
+    font-size: 0.95em;
+
+  }
+
+}
+
+    
+
+/* Statics */
+
+        .stats-container {
+
+            width: 95%; /* Takes 95% of the screen width */
+
+            max-width: 900px; /* Does not exceed 700px on larger screens */
+
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+            margin: 10px auto;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            padding: 20px;
+
+            text-align: center;
+
+        }
+
+        .stats-container h1 {
+
+            font-size: 2.5rem;
+
+            text-align: center;
+
+            color: #333;
+
+            margin: 20px auto;
+
+        }
+
+        .live-content {
+
+            border: 2px solid #333; /* Solid bold line */
+
+            border-radius: 10px;
+
+            padding: 50px 20px;
+
+            color: #999;
+
+            font-size: 18px;
+
+        }
+
+    
+
+/* Music Toggle */
+
+#music-toggle {
+
+    cursor: pointer;
+
+    background-color: #f0f0f0;
+
+    color: #333;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    user-select: none;
+
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+#music-toggle.off {
+
+    background-color: #d9534f;
+
+    color: white;
+
+  
+
+}
+
+  
+
+  #whole-body{ 
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden; /* Prevent scrollbars */
+
+    height: 1vh;
+
+}
+
+#snow-container {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1000;
+
+}
+
+.snowflake {
+
+    position: absolute;
+
+    top: -50px; /* Start offscreen */
+
+    color: white;
+
+    font-size: 1rem;
+
+    opacity: 0.8;
+
+    user-select: none;
+
+    animation: fall linear infinite;
+
+}
+
+  
+
+@keyframes fall {
+
+    0% {
+
+        transform: translateY(-100px);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(100vh);
+
+        opacity: 0;
+
+    }
+
+}
+
+    /* last forever */
+
+    #last-footer {
+
+  font-size: 13px; /* Small font size for text */
+
+  padding: 5px; /* Small padding to keep it compact */
+
+  text-align: center; /* Center the text */
+
+  width: 100%; /* Ensure it spans the entire width */
+
+  max-width: 900px; /* Set a maximum width for larger screens */
+
+  margin: 0 auto; /* Center the div horizontally */
+
+        
+
+   }
+
+ /* header ads */
+
+.page-ads {
+
+    position: center;
+  
+    display: block ;
+
+    margin: auto auto;
+
+    margin-top: 80px;
+
+    padding: 0;
+
+    background: transparent;
+
+    align-items: center;
+
+    text-align: center;
+
+    max-width: 900px;
+
+    width: 95%;
+
+}
+
+/* body ads */
+
+.body-ads {
+
+    position: center;
+  
+    display: block ;
+
+    margin: auto auto;
+
+    margin-bottom: 20px;
+
+    padding: 3px;
+
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    
+    color: #000;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    align-items: center;
+
+    text-align: center;
+
+    max-width: 900px;
+
+    width: 95%;
+
+}
+
+    /* footer ads */
+
+.footer-ads {
+
+    position: center;
+
+    margin: auto auto;
+  
+    display: block ;
+
+    margin-bottom: 20px;
+
+    padding: 0;
+
+    background: transparent;
+
+    border-radius: 0;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    align-items: center;
+
+    text-align: center;
+
+    max-width: 900px;
+
+    width: 95%;
+
+}
+
+
+/* Default: Hide ads */
+
+#left-ad, #right-ad {
+
+    display: none;
+
+}
+
+/* Desktop only: Show and position ads */
+
+@media (min-width: 1024px) {
+
+    #left-ad, #right-ad {
+
+        display: block;
+
+        position: fixed;
+
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        width: 160px;
+
+        height: 600px;
+
+        z-index: 1000;
+
+    }
+
+    #left-ad {
+
+        left: 35px; /* Position at the left edge */
+
+    }
+
+    #right-ad {
+
+        right: 35px; /* Position at the right edge */
+
+    }
+  
+#left-ad, #right-ad {
+
+    display: block ;
+
+    background: transparent; /* Temporary for testing */
+
+    border: 1px solid red; /* Temporary for visibility */
+
+   }
+}
+    
+
+    /* Wishing box */
+
+    .wishing-container {
+
+            width: 95%;
+
+            max-width: 900px;
+
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+            padding: 20px;
+
+            margin: 30px auto;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            text-align: center;
+
+            position: relative;
+
+        }
+
+        .title {
+
+            font-size: 2rem;
+
+            color: #333;
+
+            margin-bottom: 10px;
+
+        }
+
+        .timer {
+
+            font-size: 1rem;
+
+            color: #555;
+
+            margin-bottom: 20px;
+
+        }
+
+        .box-wrapper {
+
+            position: relative;
+
+            height: 210px;
+
+        }
+
+        .box {
+
+            width: 230px;
+
+            height: auto;
+
+            margin: 15px auto;
+
+            display: block;
+
+            transition: transform 0.3s ease-in-out;
+
+        }
+
+        .hidden {
+
+            display: none;
+
+        }
+
+        .wish-button {
+
+            background-color:  #FF813F;
+
+            color: #fff;
+
+            border: none;
+
+            display: inline-block;
+
+            padding: 10px 25px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            font-size: 1rem;
+
+            cursor: pointer;
+
+            margin-top: 50px;
+
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+            white-space: nowrap; /* Keeps button text on one line */
+
+        }
+
+        .wish-button:hover {
+
+            background-color: #ff4c4c;
+
+        }
+
+        .prize-image {
+
+            width: 100px;
+
+            height: auto;
+
+            border-radius: 15px;
+
+            animation: zoom-in 0.5s ease-in-out;
+
+            display: block;
+
+            margin: 47px 0 0 0;
+
+        }
+
+        #prize {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+
+            z-index: 10;
+
+        }
+
+        .congratulations {
+
+            font-size: 1.5rem;
+
+            color: #ff6f6f;
+
+            margin-bottom: 20px;
+
+            display: none;
+
+        }
+
+        @keyframes zoom-in {
+
+            0% {
+
+                transform: scale(0);
+
+            }
+
+            100% {
+
+                transform: scale(1);
+
+            }
+
+        }
+
+    /* Event Element */   
+
+    
+
+  .about-section {
+
+    position: relative;
+
+    width: 95%;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.about-section h2 {
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    font-size: 1.7rem;
+
+    color: #333;
+
+}
+
+.about-section p {
+
+    font-size: 1rem;
+
+    margin: 10px 0;
+
+    color: #555;
+
+}
+
+.about-section .icon {
+
+    font-size: 3rem;
+
+    margin-top: 20px;
+
+    color: #e91e63;
+
+}
+
+@media (min-width: 768px) {
+
+    .about-section {
+
+        flex-direction: row;
+
+        text-align: left;
+
+        justify-content: space-between;
+
+        padding: 60px;
+
+        max-width: 900px;
+
+    }
+
+    .about-section h2 {
+
+        margin-bottom: 0 5px;
+
+        font-size: 2.2rem;
+
+        text-align: left;
+
+    }
+
+    .about-section p {
+
+        text-align: left;
+
+        font-size: 1.1rem;
+
+        
+
+    }
+
+    .about-section .icon {
+
+        font-size: 5rem;
+
+        margin: 13px;
+
+        align-self: flex-center;
+
+    }
+
+}
+
+    /* Main buff comtainer */
+
+.buff-wrapper {
+
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    width: 95%;
+
+    max-width: 900px;
+
+    margin: 20px auto;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Content container for video and text */
+
+.buff-content-container {
+
+    display: flex;
+
+    flex-direction: column; /* Stacks items vertically by default */
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+/* Video container */
+
+#buff-container {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 20px; /* Adds spacing between text and video on mobile */
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+#buffVideo {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    border-radius: 15px;
+
+}
+
+/* Transparent overlay link */
+
+#buff-container a {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+/* Text content */
+
+#buff-content {
+
+    text-align: center;
+
+}
+
+#buff-content h2 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 2.3rem;
+
+    margin-bottom: 25px;
+
+    color: #222;
+
+}
+
+#buff-content p {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #555;
+
+}
+
+/* Desktop-specific adjustments */
+
+@media (min-width: 1024px) {
+
+    .buff-content-container {
+
+        flex-direction: row; /* Places items side by side on desktop */
+
+        align-items: flex-start; /* Aligns items properly at the top */
+
+    }
+
+    #buff-content {
+
+        width: 50%; /* Occupies half of the container */
+
+        text-align: left; /* Aligns text to the left on desktop */
+
+        margin-right: 20px; /* Adds spacing between text and video */
+
+    }
+
+    #buff-container {
+
+        width: 50%; /* Video takes up half of the container */
+
+        margin-top: 0; /* Removes margin added for mobile */
+
+    }
+
+ }
+
+    
+
+/* Footer Styles */
+
+#custom-footer {
+
+    background-color: #333;
+
+    color: #fff;
+
+    padding: 20px;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    width: 100%; /* Ensures it spans the entire width */
+
+    position: relative; /* Prevents unexpected overlap */
+
+}
+
+#custom-footer .custom-footer-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    gap: 10px;
+
+    max-width: 1300px; /* Sets a maximum width for better alignment on larger screens */
+
+    margin: 0 auto; /* Centers the content */
+
+}
+
+#custom-footer .custom-footer-container div {
+
+    flex: 1 1 calc(33.33% - 20px); /* Allows for three equal columns with gaps */
+
+    min-width: 200px; /* Ensures proper scaling on smaller screens */
+
+}
+
+#custom-footer .custom-footer-container h3 {
+
+    color: #4CAF50;
+
+    margin-bottom: 10px; /* Adds spacing below headings */
+
+}
+
+#custom-footer .custom-footer-social nav a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    margin: 0 10px;
+
+}
+
+    
+
+#custom-footer .custom-footer-container p {
+
+    color: #fff ;
+
+}
+
+    
+
+#custom-footer .custom-footer-social nav img {
+
+    width: 30px;
+
+    height: 30px;
+
+}
+
+@media (max-width: 768px) {
+
+    #custom-footer .custom-footer-container {
+
+        flex-direction: column;
+
+        align-items: center; /* Centers content in mobile view */
+
+        padding: 15px;
+
+    }
+
+        #last-footer {
+
+            font-size: 0.8rem;
+
+        }
+
+    #custom-footer .custom-footer-container div {
+
+        flex: 1 1 100%; /* Makes each column full-width on smaller screens */
+
+        
+
+      
+
+    }
+
+}
+
+    /* Chat box styling */
+
+.chat-box {
+
+  width: 95%;
+
+  max-width: 900px;
+
+  margin: 20px auto;
+
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+
+  padding: 10px;
+
+}
+
+/* Chat title styling */
+
+.chat-title {
+
+  text-align: center;
+
+  font-size: 2.0rem;
+
+  margin: 0 0 15px;
+
+  font-family: Arial, sans-serif;
+
+  color: #333;
+
+}
+
+/* Inner container for padding around chat */
+
+.chat-inner {
+
+  padding: 5px;
+
+  background-color: #fff;
+
+  border-radius: 8px;
+
+}
+
+    /* user tracker */
+
+    .activity-container {
+
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+      width: 95%;
+
+      max-width: 900px;
+
+      margin: 20px auto;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 20px;
+
+      border-radius: 10px;
+
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    #custom-h2 {
+
+      font-size: 2.0rem;
+
+      margin-bottom: 25px ;
+
+      color: #333;
+
+      text-align: center;
+
+    }
+
+    .activity {
+
+      display: flex;
+
+      justify-content: space-around;
+
+      gap: 8px;
+
+      margin-top: 20px;
+
+    }
+
+    .stat {
+
+      flex: 1;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      background: #f9f9f9;
+
+      border-radius: 8px;
+
+      padding: 20px;
+
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .stat span {
+
+      font-size: 2rem;
+
+      font-weight: bold;
+
+      color: #FF4500;
+
+    }
+
+    .stat p {
+
+      font-size: 1rem;
+
+      color: #666;
+
+      margin-top: 10px;
+
+    }
+
+    @media (max-width: 768px) {
+
+      .activity {
+
+        flex-direction: column;
+
+      }
+
+        
+
+        
+
+        /* Countdown */
+
+/*  #countdown-element {
+
+    font-family: 'Arial', sans-serif;
+
+    margin-top: 20px;
+
+    padding: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden; */
+
+   
+
+}
+
+.countdown-container {
+
+    text-align: center;
+
+    margin: 10px auto;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    border-radius: 10px;
+
+    max-width: 900px;
+
+    width: 95%;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden; 
+
+}
+
+#custom-h2{
+
+    font-size: 3.0rem;
+
+    margin-bottom: 25px;
+
+    color: #333;
+
+}
+
+.countdown {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    gap: 8px;
+
+}
+
+.time {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background: #f9f9f9;
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.time span {
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    color: #FF4500;
+
+}
+
+.time p {
+
+    font-size: 1rem;
+
+    color: #666;
+
+}
+
+@media (max-width: 768px) {
+
+    #custom-h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+    .time span {
+
+        font-size: 1.6rem;
+
+    }    
+
+  
+
+/* Reset List Styles */
+
+ul, ol {
+
+    list-style: none !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+}
