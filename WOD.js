@@ -68,36 +68,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const snowContainer = document.getElementById("snow-container");
 
-const maxRaindrops = 50; // Maximum number of raindrops at any time
+const maxRaindrops = 50; // Maximum number of raindrops
 let raindropCount = 0;
 
 // Function to create and animate a raindrop
 function createRaindrop() {
-  if (raindropCount >= maxRaindrops) return; // Limit the number of raindrops
+  if (raindropCount >= maxRaindrops) return;
 
   const raindrop = document.createElement("div");
-  raindrop.classList.add("raindrop"); // Updated class name
-  raindrop.textContent = "💧"; // Directly use the raindrop emoji
+  raindrop.classList.add("raindrop");
+  raindrop.textContent = "💧"; // Raindrop emoji
 
-  // Randomize appearance and animation
-  raindrop.style.left = `${Math.random() * 100}vw`; // Random horizontal position
-  raindrop.style.animationDuration = `${2 + Math.random() * 3}s`; // Faster fall for rain
-  raindrop.style.fontSize = `${10 + Math.random() * 20}px`; // Random sizes
-  raindrop.style.animationDelay = `${Math.random() * 2}s`; // Random delay
+  // Random horizontal position
+  raindrop.style.left = `${Math.random() * 100}vw`;
 
+  // Random size
+  raindrop.style.fontSize = `${10 + Math.random() * 20}px`;
+
+  // Random animation duration
+  raindrop.style.animationDuration = `${2 + Math.random() * 3}s`;
+
+  // Add raindrop to the container
   snowContainer.appendChild(raindrop);
-  raindropCount++; // Increment the raindrop count
+  raindropCount++;
 
-  // Remove the raindrop after it completes the animation
+  // Remove the raindrop after the animation ends
   raindrop.addEventListener("animationend", () => {
     raindrop.remove();
-    raindropCount--; // Decrement the raindrop count
+    raindropCount--;
   });
 }
 
 // Continuously create raindrops at intervals
-setInterval(createRaindrop, 250);
-
+setInterval(createRaindrop, 200);
   function updateCountdown() {
 
     const targetDate = new Date("December 25, 2024 00:00:00").getTime();
