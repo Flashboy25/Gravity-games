@@ -511,17 +511,17 @@ p {
 
   
 
-  #whole-body{ 
+  /*#whole-body{ 
 
     margin: 0;
 
     padding: 0;
 
-    overflow: hidden; /* Prevent scrollbars */
+    overflow: hidden;
 
     height: 1vh;
 
-}
+}*/
 
 #snow-container {
   position: fixed;
